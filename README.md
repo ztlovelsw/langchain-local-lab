@@ -118,6 +118,8 @@ python run.py --provider openai --stage basic
 
 先理解 `@tool` 的输入 schema，再换成真实模型的 tool-calling agent。Agent 的核心不是“魔法”，而是：模型提出工具调用 → 程序执行工具 → 把结果回传模型。
 
+每课配有独立教程文档，位于 `tutorials/`：`01_从_Runnable_到_RAG.md`（第 1 课）到 `05_工具与Agent.md`（第 5 课）。教程里有逐步的观察实验、动手改动和小挑战，跟着顺序做即可。
+
 ## 5. 验证
 
 安装开发依赖后运行：
@@ -131,6 +133,7 @@ python -m pytest -q
 ## 6. 文件导航
 
 - `run.py`：最简单的入口。
+- `tutorials/`：每课一篇的教程文档（01–05）。
 - `src/langchain_lab/models.py`：离线模型、离线 embeddings，以及 OpenAI 切换逻辑。
 - `src/langchain_lab/flow.py`：六个可单独运行的阶段。
 - `tests/test_flow.py`：每个阶段的最小回归测试。
